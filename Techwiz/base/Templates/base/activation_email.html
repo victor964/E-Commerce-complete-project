@@ -1,0 +1,12 @@
+{% autoescape off %}
+Hi {{ user.first_name }},
+
+Please click on the following link to activate your account:
+
+http://{{ domain }}{% url 'customer_activate' uidb64=uid token=token %}
+
+Thank you for registering with Techwizsound.
+
+Best regards,
+Techwizsound Team
+{% endautoescape %}
